@@ -1,0 +1,395 @@
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>3M Science. Applied to Life.™ | 한국쓰리엠</title>
+		<meta name="description"  content="3M Science. Applied to Life.™" />
+		<meta name="keywords"  content="3M, 혁신, 기술, 과학, 제품, 회사, Health Care Academy Online Platform, HCA" />
+		<meta name="title" content="한국쓰리엠"/>
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="한국쓰리엠">
+		<meta property="og:description" content="3M Science. Applied to Life.™">
+		<link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+		<script type="text/javascript" src="js/autosize.js"></script>
+		<script type="text/javascript" src="js/TagTagger.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script> <!--0906추가-->
+		<link rel="stylesheet" type='text/css' media='all' href="css/common.css" />
+		<link rel="stylesheet" type='text/css' media='all' href="css/contents.css" />
+		<link rel="stylesheet" type='text/css' media='all' href="css/jquery-ui.css" />
+		<link rel="stylesheet" type='text/css' media='all' href="css/nice-select.css" />
+		
+	</head>
+	<body>
+
+		<div id="wrap" class="tempType type02"> <!-- 메뉴(카테고리)에 따라 class - home, tempType(products, video, survey), doType(REQUESTS, INQUIRIES)교체-->
+			
+			<!-- header -->
+			<header id="header">
+				<h1>HCA</h1>
+
+				<ul class="gnb">
+					<li><a href="">HOME</a></li>
+					<li><a href="">CONTENTS</a></li>
+					<li><a href="">PRODUCTS</a></li>
+					<li><a href="">VIDEOS</a></li>
+					<li><a href="">REQUESTS</a></li>
+					<li><a href="">INQUIRIES</a></li>
+					<li><a href="">REPORTS</a></li>
+					<li class="avtive"><a href="">SURVEY</a></li>
+					<li><a href="">SETTINGS</a></li>
+					<li><a href="">LOGOUT</a></li>
+				</ul>
+				<p class="copyright">Health Care Academy<br />Online Platform for<br />administrators<span>© 3M 2017. <br />All Rights Reserved.</span></p>
+			</header>
+			<!-- //header -->
+
+			<!-- category -->
+			<div class="categorySection">
+				<h2>SURVEY</h2>
+				<div class="categoryIn">
+					<ul class="settingMenu">
+						<li>
+							<a href="#">FOOD MATRIX </a>
+						</li>
+
+						<li class="select">
+							<a href="#">SURVEY RESULT</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- category -->
+			<!-- container -->
+			<div id="container">
+				<div id="content">
+
+					<div class="surveyArea surveyResult">
+
+							<h3>SURVEY RESULT</h3>
+							<div class="sortArea">
+								
+                                <ul>
+                                    <li><a href="#" class="on">USE OF 3M PRODUCTS</a></li>
+                                    <li><a href="#">OPINIONS</a></li>
+                                </ul>
+                                <p>The last updated datetime : 05/23/2017 12:00</p>
+
+							</div>
+
+							<div class="surveyIn">
+								<div class="surveyResultTop">
+                                
+								    <div class="filter">
+                                        <ul>
+                                            <li>
+                                                <h4>PERIOD</h4> 
+                                                <div class="filterPeriod">
+                                                    <div class="writeBox"> 
+                                                        <input type="text" id="datepicker"> 
+                                                    </div>
+                                                <p class="bar"></p> 
+                                                    <div class="writeBox"> 
+                                                    <input type="text" id="datepicker2"> 
+                                                    </div> 
+                                                </div>
+
+                                                <script> 
+                                                // Datepicker 오늘 날짜 설정 
+                                                function setDatepickerToday(datepicker) { 
+                                                var d = new Date(); 
+                                                datepicker.datepicker("setDate", new Date(d.getFullYear(), d.getMonth(), d.getDate()) ); 
+                                                } 
+
+                                                // 한글화 설정 
+                                                $.datepicker.setDefaults({ 
+                                                dayNames: ['S', 'M', 'T', 'W', 'T', 'F', 'S'], 
+                                                dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'], 
+                                                dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'], 
+                                                dateFormat: 'mm/dd/yy' 
+                                                }); 
+
+                                                $( function() { 
+                                                // datepicker 생성 
+                                                $( "#datepicker" ).datepicker(); 
+                                                // 오늘 날짜 설정 
+                                                setDatepickerToday($( "#datepicker" )); 
+                                                }); 
+                                                </script> 
+
+                                                <script>
+
+                                                $( function() { 
+                                                // datepicker 생성 
+                                                $( "#datepicker2" ).datepicker(); 
+                                                // 오늘 날짜 설정 
+                                                setDatepickerToday($( "#datepicker2" )); 
+                                                }); 
+                                                </script>
+                                            </li>
+                                            <li>
+                                                <h4>APAC CATEGORY</h4>
+                                                <select>
+                                                    <option>ALL</option>
+                                                    <option>Snack and confectionery</option>
+                                                    <option>Beverage</option>
+                                                    <option>Meet (Egg)</option>
+                                                    <option>Dairy</option>
+                                                    <option>Seafood</option>
+                                                    <option>Processed fresh-produce</option>
+                                                    <option>Flavor &amp; Spice(Savory)</option>
+                                                    <option>RTE(Ready to Eat)</option>
+                                                    <option>IEP(Infant Fomular Powder)</option>
+                                                    <option>Others</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <h4>FOOD GROUP</h4>
+                                                <select>
+                                                    <option>ALL</option>
+                                                    <option>Confectioneries</option>
+                                                    <option>Cocoa Products or Chocolates</option>                                   </select>
+                                            </li>
+                                            <li>
+                                                <h4>FOOD TYPE</h4>
+                                                <select>
+                                                    <option>ALL</option>
+                                                    <option>Confectionery</option>
+                                                    <option>Candy</option>
+                                                    <option>Chewing gum</option>
+                                                    <option>Bread</option>
+                                                    <option>Rice cake</option>                                    </select>
+                                            </li>
+
+                                        </ul>
+
+             
+
+								    </div>
+								    <div class="chart">
+                                           
+                                       <div class="chartFrame">
+                                            <canvas id="pieChart" width="0px"></canvas>
+                                        </div>
+                                        <div class="chartInfo">
+                                           <div class="tit">
+                                            <strong>전국</strong>
+                                            <p>100.00% of total responses</p>
+                                           </div>
+                                           <div class="legend">
+                                            <p><span></span>USE OF 3M PRODUCTS</p>
+                                            <p><span></span>OTHER WAYS</p>
+                                           </div>
+                                        </div>
+								    </div>
+
+
+                                    <script>
+
+                                    /* pie chart */        
+                                    var customTooltips=function(t){var e=document.getElementById("chartjs-tooltip");if(e||((e=document.createElement("div")).id="chartjs-tooltip",e.innerHTML="<table></table>",this._chart.canvas.parentNode.appendChild(e)),0!==t.opacity){if(e.classList.remove("above","below","no-transform"),t.yAlign?e.classList.add(t.yAlign):e.classList.add("no-transform"),t.body){var o=t.title||[],a=t.body.map(function(t){return t.lines}),r="<thead>";o.forEach(function(t){r+="<tr><th>"+t+"</th></tr>"}),r+="</thead><tbody>",a.forEach(function(e,o){var a=t.labelColors[o],n="background:"+a.backgroundColor;n+="; border-color:"+a.borderColor,r+="<tr><td>"+('<span class="chartjs-tooltip-key" style="'+(n+="; border-width: 2px")+'"></span>')+e+"</td></tr>"}),r+="</tbody>",e.querySelector("table").innerHTML=r}var n=this._chart.canvas.offsetTop,s=this._chart.canvas.offsetLeft;e.style.opacity=1,e.style.left=s+t.caretX+"px",e.style.top=n+t.caretY+"px",e.style.fontSize=t.fontSize,e.style.fontStyle=t._fontStyle,e.style.padding=t.yPadding+"px "+t.xPadding+"px"}else e.style.opacity=0};
+
+                                    var config = {
+                                        type: 'pie',
+                                        data: {
+                                            labels: ["OTHER WAYS", "USE OF 3M PRODUCTS"],
+                                            datasets: [{
+                                                backgroundColor: ["#eaeaea", "#ff6d26"],
+                                                data: [68,32] //데이터
+                                            }]
+                                        },
+                                        options: {
+                                            legend: {display: false},
+                                            tooltips: {enabled: false, mode: 'index', position: 'nearest',
+                                                custom: customTooltips,
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                                                        var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {return previousValue + currentValue;});
+                                                        var currentValue = dataset.data[tooltipItem.index];
+                                                        var precentage = Math.floor(((currentValue / total) * 100) + 0.5);
+                                                        return data.labels[tooltipItem.index] + ' : ' + precentage + "%";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    };
+                                        
+                                    window.onload = function() {
+                                        var ctx = document.getElementById("pieChart").getContext("2d");
+                                        window.myPie = new Chart(ctx, config);
+                                    };
+                                        
+                                    </script>
+								    <div class="btnWrap">
+								        <a class="btnExport" href="#">EXPORT TO CSV</a>
+								        <a class="btnPin" href="#">PIN THIS REPORT</a>
+								    </div>
+								    
+								    
+								    
+								</div>
+								<div class="surveyResultBottom surveyResultDetails">
+                                    
+                                       <div class="tit">
+                                           <strong>REPORT NAME</strong>
+                                           <div class="keywords">
+ 
+                                               <em>Nationwide - Confectionery - from 03/01/2017 to 07/27/2017</em>
+                                               <p>REGION: <span>전국</span></p>
+                                               <p>SURVEY RESPONSES: <span>7,140</span></p>
+                                               <p>RUSE OF 3M PRODUCTS (%): <span>32%</span></p>
+                                               <p>OTHER WAYS (%): <span>68%</span></p>
+                                           </div>
+                                       </div>
+                                        
+								        <table class="dataTable">
+								            <caption>Details</caption>
+								            <colgroup>
+								                <col />
+								                <col />
+								                <col />
+								                <col />
+								                <col />
+								                <col />
+								            </colgroup>
+								            <thead>
+								                <tr>
+								                    <th><a href="#" class="up">NAME</a></th> <!--오름차-->
+								                    <th><a href="#" class="down">COMPANY</a></th>
+                                                    <th><a href="#" class="down">REGION</a></th>
+                                                    <th><a href="#" class="down">DATE</a></th>
+                                                    <th><a href="#" class="down">USE OF 3M<br>PRODUCTS (%)</a></th>
+                                                    <th><a href="#" class="down">OTHER<br/>WAYS (%)</a></th>
+								                </tr>
+								            </thead>
+								            <tbody>
+								                <tr>
+								                    <th>홍길동</th>
+								                    <td>일반적인회사</td>
+								                    <td>서울</td>
+								                    <td>07/27/2017</td>
+								                    <td>30%</td>
+								                    <td>70%</td>
+								                </tr>
+								                <tr>
+								                    <th>홍길동</th>
+								                    <td>일반적인회사</td>
+								                    <td>부산</td>
+								                    <td>05/29/2017</td>
+								                    <td>42%</td>
+								                    <td>58%</td>
+								                </tr>
+								                <tr>
+								                    <th>김나영</th>
+								                    <td>회사1</td>
+								                    <td>울산</td>
+								                    <td>05/22/2017</td>
+								                    <td>31%</td>
+								                    <td>69%</td>
+								                </tr>
+								                <tr>
+								                    <th>김나영</th>
+								                    <td>회사2</td>
+								                    <td>서울</td>
+								                    <td>05/31/2017</td>
+								                    <td>48%</td>
+								                    <td>52%</td>
+								                </tr>
+								                <tr>
+								                    <th>김이박</th>
+								                    <td>위워크</td>
+								                    <td>서울</td>
+								                    <td>03/08/2017</td>
+								                    <td>27%</td>
+								                    <td>73%</td>
+								                </tr>
+								                <tr>
+								                    <th>갑돌이</th>
+								                    <td>위워크</td>
+								                    <td>대구</td>
+								                    <td>01/02/2017</td>
+								                    <td>60%</td>
+								                    <td>40%</td>
+								                </tr>
+								                <tr>
+								                    <th>갑순이</th>
+								                    <td>일반적인회사</td>
+								                    <td>제주</td>
+								                    <td>05/29/2017</td>
+								                    <td>42%</td>
+								                    <td>58%</td>
+								                </tr>
+								                <tr>
+								                    <th>김나영</th>
+								                    <td>회사1</td>
+								                    <td>울산</td>
+								                    <td>05/22/2017</td>
+								                    <td>31%</td>
+								                    <td>69%</td>
+								                </tr>
+								                <tr>
+								                    <th>김나영</th>
+								                    <td>회사2</td>
+								                    <td>서울</td>
+								                    <td>05/31/2017</td>
+								                    <td>48%</td>
+								                    <td>52%</td>
+								                </tr>
+								                <tr>
+								                    <th>김이박</th>
+								                    <td>위워크</td>
+								                    <td>서울</td>
+								                    <td>03/08/2017</td>
+								                    <td>27%</td>
+								                    <td>73%</td>
+								                </tr>
+								                <tr>
+								                    <th>갑돌이</th>
+								                    <td>위워크</td>
+								                    <td>대구</td>
+								                    <td>01/02/2017</td>
+								                    <td>60%</td>
+								                    <td>40%</td>
+								                </tr>
+								            </tbody>
+								        </table>
+								        
+								        <a href="#" class="btnTableMore">VIEW MORE</a>
+								        
+								        <dl class="pinned">
+                                            <dt>PINNED REPORTS (4)</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="#">Seoul - All - from 06/27/2017 to 07/27/2017</a><a class="unpin" href="#">Unpin</a></li>
+                                                    <li><a href="#">Daegu - All - from 06/27/2017 to 07/27/2017</a><a class="unpin" href="#">Unpin</a></li>
+                                                    <li><a href="#">Busan - All - from 06/27/2017 to 07/27/2017</a><a class="unpin" href="#">Unpin</a></li>
+                                                    <li>-</li>
+                                                    <li>-</li>
+                                                </ul>
+                                            </dd>
+          <dd class="btn"><a href="#">VIEW MORE</a></dd>
+
+                                        </dl>
+
+								    </div>
+								    <!-- //surveyResultBottom -->
+								</div>
+								<!-- //surveyIn -->
+							</div>
+							<!-- //surveyArea surveyResult -->
+
+				</div>
+			</div>
+			<!-- //container -->
+		</div>
+
+	</body>
+</html>
