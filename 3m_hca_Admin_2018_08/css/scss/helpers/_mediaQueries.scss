@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+// Break Point
+$laptop-sm-width: 1300px;
+$tablet-width: 768px;
+$mobile-width: 580px;
+$mobile-sm-width: 340px;
+
+// ----------------------- * -----------------------
+
+// Laptop (SM)
+@mixin res__Laptop {
+  @media screen and (max-width: #{$laptop-sm-width}) {
+    @content;
+  }
+}
+
+// ----------------------- * -----------------------
+
+// Tablet
+@mixin res__Tablet {
+  @media screen and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+// ----------------------- * -----------------------
+
+// Mobile
+@mixin res__Mobile {
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+// Mobile sm
+@mixin res__Mobile_S {
+  @media screen and (max-width: #{$mobile-sm-width}) {
+    @content;
+  }
+}

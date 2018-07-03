@@ -1,0 +1,706 @@
+@charset "utf-8";
+
+/* webfont */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,600");
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+@font-face {
+  font-family: "CircularStd-Medium";
+  src: url("../font/CircularStd-Medium.eot");
+  src: url("../font/CircularStd-Medium.woff2") format("woff2"),
+    url("../font/CircularStd-Medium.woff") format("woff"),
+    url("../font/CircularStd-Medium.ttf") format("truetype"),
+    url("../font/CircularStd-Medium.svg#CircularStd-Medium") format("svg"),
+    url("../font/CircularStd-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* CSS 초기화 */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #282828;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul,
+li {
+  list-style: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-decoration: none;
+  vertical-align: baseline;
+  color: #282828;
+  background: transparent;
+}
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  vertical-align: top;
+  border-radius: 0;
+}
+input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  display: block;
+}
+
+/* scrollbar */
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(208, 208, 208, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* layout */
+#wrap {
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 190px;
+  padding-top: 300px;
+  background-color: #ffffff;
+  box-shadow: 6px 2px 9px 0 rgba(67, 67, 67, 0.33);
+  z-index: 130;
+}
+header h1 {
+  position: absolute;
+  left: 21px;
+  top: 27px;
+  overflow: hidden;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url("../images/common/logo.png");
+  background-size: 80px 80px;
+  text-indent: -999px;
+}
+header .gnb {
+  font-size: 11px;
+  letter-spacing: 2px;
+  background-color: #fff;
+}
+header .gnb li {
+  position: relative;
+  padding-left: 43px;
+  line-height: 25px;
+}
+header .gnb li:after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  content: "";
+  width: 0px;
+  height: 1px;
+  margin-top: -1px;
+  background: #fff;
+  transition: all 0.3s;
+}
+header .gnb a {
+}
+header .gnb li.avtive a {
+  font-weight: bold;
+}
+
+header .gnb li:active:after,
+header .gnb li:hover:after {
+  display: block;
+  width: 24px;
+  background-color: #979797;
+}
+header .gnb li:nth-child(5) {
+  margin-top: 43px;
+}
+
+header .gnb.superUser li:nth-child(5) {
+  margin-top: 0px;
+}
+header .gnb.superUser li:nth-child(6) {
+  margin-top: 43px;
+}
+
+header .copyright {
+  position: absolute;
+  bottom: 27px;
+  left: 28px;
+  width: calc(100% - 40px);
+  font-size: 10px;
+}
+header .copyright span {
+  display: block;
+  padding-top: 22px;
+}
+@media screen and (max-height: 800px) {
+  header .copyright {
+    display: none;
+  }
+}
+.categorySection {
+  position: fixed;
+  left: 190px;
+  top: 0;
+  bottom: 0;
+  width: 270px;
+  padding-top: 100px;
+  background: #3c3c3c;
+  z-index: 120;
+}
+.categorySection h2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 250px;
+  height: 100px;
+  padding-left: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  line-height: 100px;
+  text-align: left;
+  color: #ffffff;
+}
+.categorySection h2 a.btn_act {
+  position: absolute;
+  right: 8px;
+  top: 32px;
+  overflow: hidden;
+  display: block;
+  width: 39px;
+  height: 39px;
+  background: url("../images/content/ico_act.png");
+  background-size: 39px 39px;
+  text-indent: -999px;
+}
+.categorySection h2 a.btn_act:hover {
+  background-image: url("../images/content/ico_act_hover.png");
+}
+.categorySection .categoryIn {
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* textarea placeholder */
+textarea::-webkit-input-placeholder {
+  color: #aaaaaa !important;
+  letter-spacing: 1px !important;
+  font-size: 13px;
+}
+textarea:-moz-placeholder {
+  color: #838383 !important;
+  opacity: 1;
+  letter-spacing: 1px !important;
+  font-size: 13px;
+}
+textarea::-moz-placeholder {
+  color: #838383 !important;
+  opacity: 1;
+  letter-spacing: 1px !important;
+  font-size: 13px;
+}
+textarea:-ms-input-placeholder {
+  color: #838383 !important;
+  letter-spacing: 1px !important;
+  font-size: 13px;
+}
+
+/* no more yellow background!!! (Chrome) */
+input:-webkit-autofill,
+input:focus:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* common */
+.scrollY {
+  height: 100%;
+  overflow-y: auto;
+}
+.scrollX {
+  height: 100%;
+  overflow-x: auto;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
+  height: 20px;
+  padding-left: 40px;
+  background: url("../images/content/bg_check.png") no-repeat 0 50%;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label {
+  background: url("../images/content/bg_check_checked.png") no-repeat 0 50%;
+}
+
+/*카테고리에 따라 container-left값, content-width값 수정*/
+#container {
+  position: fixed;
+  left: 460px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: #f8f8f8;
+}
+#container #content {
+  min-width: 980px;
+  width: 100%;
+  height: 100vh;
+}
+
+#content .welcome {
+  float: left;
+  padding-left: 23px;
+  font-size: 44px;
+  font-weight: bold;
+}
+#content .date {
+  float: right;
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: right;
+}
+#content .date span {
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+  padding-right: 10px;
+}
+#content .date span em {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* layer */
+.dim {
+  overflow: hidden;
+  position: fixed;
+  left: 460px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.86);
+  z-index: 100;
+}
+.commonDim {
+  overflow: hidden;
+  position: fixed;
+  left: 460px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.86);
+  z-index: 100;
+}
+.dim.wide,
+.commonDim.wide {
+  left: 190px;
+  z-index: 125;
+}
+.dim.whiteType {
+  background: rgba(255, 255, 255, 0.8);
+}
+.layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 560px;
+  height: 560px;
+  padding: 58px;
+  text-align: left;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-sizing: border-box;
+  z-index: 110;
+}
+.dim.whiteType .layer {
+  box-shadow: 0 15px 42px 1px rgba(66, 66, 66, 0.5);
+}
+.layer strong {
+  display: block;
+  padding-top: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.53;
+  letter-spacing: 3.8px;
+  color: #282828;
+}
+.layer p {
+  margin-top: 35px;
+  padding-top: 38px;
+  border-top: solid 1px #979797;
+  font-size: 24px;
+  color: #282828;
+  font-family: "Noto Sans KR";
+}
+.layer .layerBtnArea {
+  position: absolute;
+  left: 58px;
+  bottom: 58px;
+  right: 58px;
+  height: 50px;
+}
+.layer .layerBtnArea:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.layer .layerBtnArea a {
+  display: block;
+  height: 50px;
+  background: #323232;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2.1px;
+  text-align: center;
+  color: #fff;
+}
+.layer .layerBtnArea.type02 a {
+  float: left;
+  width: 220px;
+  margin-left: 3px;
+}
+.layer .layerBtnArea.type02 a:first-child {
+  margin-left: 0px;
+}
+
+.layer.wideType {
+  width: 760px;
+  height: 428px;
+  padding: 0px;
+}
+
+.layer .layerBtnArea.hideType {
+  left: auto;
+  right: 0;
+  top: -60px;
+  width: 40px;
+  height: 40px;
+}
+.layer .layerBtnArea.hideType a {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background: #000 url("../images/content/btn_loginPopClose.png");
+  background-size: 40px 40px;
+  text-indent: -999px;
+}
+
+@media (max-width: 1399px) {
+  header {
+    width: 110px;
+    padding-top: 200px;
+  }
+  header h1 {
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+  }
+  header .gnb li {
+    padding-left: 15px;
+    line-height: 27px;
+  }
+  header .gnb li a {
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+  }
+  header .gnb li:active:after,
+  header .gnb li:hover:after {
+    width: 10px;
+  }
+  header .copyright {
+    left: 15px;
+  }
+
+  #content .welcome {
+    padding-left: 0;
+  }
+
+  #container {
+    left: 250px;
+  }
+  .dim {
+    left: 250px;
+  }
+  .dim.wide,
+  .commonDim.wide {
+    left: 110px;
+  }
+}
+
+/* loading
+***************************************************************************/
+
+#loading {
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ****************
+    테스트용 spinner
+       type 01
+   **************** */
+
+#loading .spinner_01 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  -webkit-animation: rotate 2.5s linear infinite;
+  animation: rotate 2.5s linear infinite;
+}
+#loading .spinner_01 .path {
+  stroke: #ef6c2d;
+  stroke-linecap: round;
+  -webkit-animation: dash 2s ease-in-out infinite;
+  animation: dash 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* ****************
+    테스트용 spinner
+       type 02
+   **************** */
+
+#loading .logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin: -13px 0 0 -15px;
+  background-image: url(../images/content/ico_logo.png);
+  background-size: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+#loading .spinner_02 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  -webkit-animation: spinner_02 1s cubic-bezier(0, 0, 0.23, 0.73) infinite;
+  animation: spinner_02 1s linear infinite;
+}
+#loading .spinner_02:before {
+  position: absolute;
+  top: -5px;
+  left: 21px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #f03413;
+  content: "";
+}
+
+@keyframes spinner_02 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ****************
+    테스트용 spinner
+       type 03
+   **************** */
+
+#loading .spinner_03 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border-radius: 50%;
+  border: 3.125px solid #ff6d52;
+  -webkit-animation: spinner_02 1.5s cubic-bezier(0, 0, 0.23, 0.73) infinite;
+  animation: spinner_02 1.5s linear infinite;
+  box-shadow: -1.5625px -1.5625px 0 1.5625px #ff6d52;
+}
+
+@keyframes spinner_02 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
