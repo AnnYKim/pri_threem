@@ -480,49 +480,6 @@
 							<a href="" class="btn btnRemove">REMOVE</a>
 						</div>
 
-						<script>
-							// 18-07-06
-							// asideArea대신 infoArea 높이를 조절하기로 변경
-
-							function setInfoAreaHeight() {
-								var $infoArea = $(".infoArea");
-								var infoAreaHeight = 0;
-								var padding = 258; //infoArea의 상단 padding 값
-
-								$(window).on("load resize", function () {
-									var aisdeHeight = $(".asideArea.product").height();
-									var vh = $(window).height();
-
-									// (aisdeHeight < vh) ? $infoArea.height(vh - padding - 40) : $infoArea.height(height - padding);
-
-									infoAreaHeight = aisdeHeight - padding;
-									console.log("infoAreaHeight", infoAreaHeight);
-
-
-
-								});
-							}
-
-							// setInfoAreaHeight();
-
-
-							// 18-07-06
-							// Dropdown의 크기 조절
-
-							// $(window).on("load", function () {
-							// 	var $selector = $(".nice-select");
-							// 	var selectorOffsetBtm = [];
-							// 	var infoAreaHeight = $(".infoArea").height();
-
-							// 	$selector.each(function () {
-							// 		console.log($(this).position().top + $(this).outerHeight(true));
-							// 	});
-							// 	console.log("selectorOffsetBtm", selectorOffsetBtm);
-							// });
-
-
-
-						</script>
 						<div class="scrollableDiv">
 							<!--스크롤 될 영역을 감쌀 div 추가(09-11)-->
 							<h4>PRODUCT CATEGORY</h4>
@@ -538,7 +495,7 @@
 							</select>
 
 							<h4>BRAND</h4>
-							<select>
+							<select class="isUpside">
 								<option>N/A</option>
 								<option>2222</option>
 								<option>33333</option>

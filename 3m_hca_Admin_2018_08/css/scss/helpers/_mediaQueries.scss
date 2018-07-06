@@ -1,15 +1,23 @@
 @charset "utf-8";
 
 // Break Point
+$laptop-md-width: 1400px;
 $laptop-sm-width: 1300px;
 $tablet-width: 768px;
 $mobile-width: 580px;
 $mobile-sm-width: 340px;
 
 $small-height: 640px;
+$large-height: 800px;
 
 // ----------------------- * -----------------------
 
+// Laptop (MD)
+@mixin res__LaptopMD {
+  @media screen and (max-width: #{$laptop-md-width}) {
+    @content;
+  }
+}
 // Laptop (SM)
 @mixin res__Laptop {
   @media screen and (max-width: #{$laptop-sm-width}) {
@@ -47,6 +55,12 @@ $small-height: 640px;
 // Small Height
 @mixin res__SmHeight {
   @media screen and (max-height: #{$small-height}) {
+    @content;
+  }
+}
+
+@mixin res__LHeight {
+  @media screen and (min-height: #{$large-height}) {
     @content;
   }
 }
