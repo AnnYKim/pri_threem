@@ -1,36 +1,5 @@
 @charset "utf-8";
 
-/* login ******************************************************************/
-.login {overflow:hidden;position:absolute;left:0;top:0;right:0;bottom:0;height:100%;min-width:560px;min-height:800px;text-align:center;}
-.loginBox {position:absolute;left:50%;top:50%;width:440px;margin:-400px 0px 0px -220px;box-sizing:border-box;}
-.loginBox strong {overflow:hidden;display:block;width:181px;height:181px;margin:0 auto;background:url('../images/common/hca_logo_login.png'); background-size: 100%; text-indent:-999px;}
-.loginBox span {display:block;margin:20px 0px 80px 0px;font-size:16px;font-weight:bold;color:#282828;}
-.loginBox span em {display:block;margin-top:3px;font-weight:normal;}
-
-.loginBox input {width:440px;height:20px;padding-bottom:25px;border:none;border-bottom:1px solid #979797;outline:none;font-size:14px;letter-spacing:2.5px;font-weight:bold;}
-.loginBox input::-webkit-input-placeholder {color:#979797;}
-.loginBox input:-ms-input-placeholder {font-size:14px;letter-spacing:2.5px;font-weight:bold;color:#979797;}
-.loginBox input[type="text"] {margin-bottom:60px;}
-.loginBox input[type="password"] {font-size:20px;}
-.loginBox input[type="password"]::-webkit-input-placeholder {font-size:14px;}
-.loginBox input[type="password"]:-ms-input-placeholder {font-size:14px;}
-
-.loginBox a.btnLogin {display:block;width:440px;height:68px;background:#efefef;line-height:68px;margin:78px 0px 30px 0px;;font-size:14px;font-weight:bold;text-align:center;color:#979797;letter-spacing:2.5px;border:none;outline:none;} 
-.loginBox a.btnLogin.active {background-image: linear-gradient(to bottom, #ff941e, #ff0a00);color:#fff;transition:background-image .4s;}
-.loginBox a.btnLogin.active:active {background-image: linear-gradient(to bottom, #d16d00, #d90800);}
-.loginBox p a {font-size:14px;color:#979797;font-weight:bold;}
-.loginBox p a:active {color:#282828;}
-.loginBox .copyright {margin-top:70px;font-size:11px;color:#282828;font-weight:200}
-
-.loginPop {position:absolute;left:50%;top:100%;width: 600px;height: 537px;margin:0px 0px 0px -280px;background: #fff;  box-shadow: 0 23px 32px 1px rgba(66, 66, 66, 0.5);border: solid 1px #f2f2f2;}
-.loginPopCont {width:400px;margin:90px auto 0 auto;color:#282828;}
-.loginPopCont p {font-size:19px;text-align:left;font-family: 'Noto Sans KR', sans-serif; font-weight:300;}
-.loginPopCont p span {display: block; margin-top: 6px; font-size:18px;}
-.loginPopCont .bg {display:block;margin:32px 0px 14px 0px;padding:33px 0px;background:#fff8f7;}
-.loginPopCont .bg span {display:block;height:1px;background:#979797;}
-.loginPopCont strong {display:block;font-size:60px;font-weight:600;text-align:center;letter-spacing:3.8px;}
-.loginPop .btnClose {overflow:hidden;position:absolute;right:0;top:0;width:40px;height:40px;text-indent:-999px;background:#000 url('../images/content/btn_loginPopClose.png');background-size:40px 40px;}
-
 /* home ***************************************************************************/
 .home #container #content {position:relative;width:980px;}
 
@@ -201,8 +170,33 @@
     
     .rankingList.actType li {height: 174px;}
     .rankingList.actType li a {height: 100%;}
-    .rankingList.actType li a .cate {overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  left: 10px; width: 82%; text-overflow: ellipsis; white-space: initial; word-break: keep-all; font-size: 15px;}
-    .rankingList.actType li a .tit {overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; left: 10px; width: 85%; height: 42px; font-size: 11px; text-overflow: ellipsis; white-space: initial; word-break: break-all; line-height: 14px;}
+    .rankingList.actType li a .cate {
+        overflow: hidden; 
+        display: -webkit-box; 
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;  
+        left: 10px; 
+        width: 82%; 
+        text-overflow: ellipsis; 
+        white-space: initial; 
+        word-break: break-all; 
+        font-size: 15px;
+        max-height: 40px;
+    }
+    .rankingList.actType li a .tit {
+        overflow: hidden; 
+        display: -webkit-box; 
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical; 
+        left: 10px; 
+        width: 82%; 
+        height: 42px; 
+        font-size: 11px; 
+        text-overflow: ellipsis; 
+        white-space: initial; 
+        word-break: break-all; 
+        line-height: 14px;
+    }
     .rankingList.actType li a .date {top: initial; bottom: 12px; left: 10px; font-size: 11px;}
     
     .home #container #content {width: 830px; min-width: 830px;}
@@ -246,9 +240,34 @@
 .tempType .prdList li.noList:hover {background:#fff !important;}
 
 .tempType #container {background:#323232;}
-.tempType .subCont {position:relative;min-width:979px;height:100vh;padding:10px 337px 10px 10px;box-sizing:border-box;}
+.tempType .subCont {
+    position: relative;
+    @include flexbox;
+    @include justify-content(flex-end);
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
-.tempType .infoArea {position:absolute;left:10px;top:10px;right:337px;bottom:10px;;min-width:632px;padding:251px 10px 25px 28px;background:#fff;box-sizing:border-box;}
+.tempType .infoArea {
+    position: absolute;
+    overflow-y: auto;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 337px);
+    min-height: 866px;
+    height: calc(100vh - 20px);
+    padding: 251px 10px 25px 28px;
+    background: #fff;
+    box-sizing: border-box;
+    
+
+    @include res__SmHeight {
+        min-height: 667px;
+    }
+}
+
 .tempType .infoArea .scrollY {padding-right:46px;}
 .tempType .infoArea .titArea {position:absolute;left:0;top:0;width:100%;height:251px;padding:83px 63px 0px 28px;box-sizing:border-box;}
 .tempType .infoArea .titArea h3 {float:left;font-size:17px;font-weight:bold;letter-spacing: 2.5px;color: #323232;}
@@ -300,7 +319,14 @@ color: #323232;background: url('../images/content/ico_arr.png') no-repeat right 
 .tempType .infoArea .checkList li:nth-child(2) {margin-top:0px;}
 .tempType .infoArea .checkList:last-child {margin-bottom: 83px;}
 
-.tempType .asideArea {/*overflow-y:auto;*/position:absolute;right:0;top:10px;bottom:10px;width:337px; /*height:100%;*/ padding:30px 30px 31px 36px;box-sizing:border-box;color:#fff;}
+.tempType .asideArea {
+    position:relative;
+    width:337px;
+    padding: 10px 0px 10px 36px;
+    box-sizing:border-box;
+    color:#fff;
+}
+
 .tempType .asideArea h4 {max-width: 248px; margin-bottom:11px;font-size:11px;letter-spacing:2.4px;}
 .tempType .asideArea .urlText {width:100%;padding:10px 0 0px 0;border:none;outline:none;font-size: 20px;line-height:1.4;letter-spacing: -0.5px;font-family: 'Noto Sans KR';background-color: #fff;resize:none;}
 .tempType .asideArea .btnArea {position: absolute; bottom: 0px; right: 35px; overflow:hidden;width:248px;height:30px;}
@@ -309,7 +335,7 @@ color: #323232;background: url('../images/content/ico_arr.png') no-repeat right 
 font-weight: bold;letter-spacing: 2px;color: #3c3c3c;}
 .tempType .asideArea .btnArea a:hover {background-color: #b6b6b6;}
 .tempType .asideArea .btnArea a:first-child {margin:0;}
-.tempType .asideArea .scrollableDiv {overflow-y: auto; margin-bottom: 8px; min-height:90px;}
+// .tempType .asideArea .scrollableDiv {overflow-y: auto; margin-bottom: 8px; min-height:90px;}
 
 .layer .addProducts {background: url('../images/content/ico_addPorducts.png') no-repeat right 156px;}
 
@@ -334,15 +360,86 @@ font-weight: bold;letter-spacing: 2px;color: #3c3c3c;}
 }
 
 /* PRODUCT ******************************************************************************/
-.asideArea.product .img {width:240px;height:240px;margin-bottom:30px;padding:4px;background:#fff;}
-.asideArea.product .img img {width:240px;height:240px;}
-.asideArea.product .inputArea {overflow:hidden;display:block;width:248px !important; height:60px !important;margin-bottom:50px;padding-top:5px;border:none;background:none;font-size: 15px;font-weight: bold;line-height: 1.6;letter-spacing: 2.4px;color: #ffffff;box-sizing:border-box;font-family: 'Montserrat';outline:none;border-bottom:solid 1px #464646;}
+.asideArea.product .img {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 30px;
+    background:#fff;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include res__SmHeight {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.asideArea.product .inputArea {
+    overflow:hidden;
+    display:block;
+    width:248px !important; 
+    height:60px !important;
+    margin-bottom:50px;
+    padding-top:5px;
+    border:none;
+    background:none;
+    font-size: 15px; //1.25em
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 2.4px;
+    color: #ffffff;
+    box-sizing:border-box;
+    font-family: 'Montserrat';
+    outline:none;
+    border-bottom:solid 1px #464646;
+
+    @include res__SmHeight {
+        font-size: 13px;
+    }
+}
 .asideArea.product .inputArea::-webkit-input-placeholder {font-size: 15px;font-weight: bold;line-height: 1.6;letter-spacing: 2.4px;color: #ffffff;box-sizing:border-box;}
 .asideArea.product .inputArea:-ms-input-placeholder {font-size: 15px;font-weight: bold;line-height: 1.6;letter-spacing: 2.4px;color: #ffffff;box-sizing:border-box;}
-.asideArea.product .inputArea + .btnRemove {display:none;position:absolute;left:46px;top:390px;color: #626262;font-weight:bold;font-size:11px;letter-spacing: 2px;;}
-.asideArea.product .active .inputArea + .btnRemove {display: block; margin-top: 76px; margin-left: -10px;}
-.asideArea.product .nice-select {width:248px;margin-bottom:40px;}
-.asideArea.product .imgAttach {clear:both;position:relative;width:208px;margin-bottom:50px;padding-right:40px;}
+.asideArea.product .inputArea + .btnRemove {display:none;position:absolute;left:0px;top:67px;color: #626262;font-weight:bold;font-size:11px;letter-spacing: 2px; opacity: 0;}
+.asideArea.product .active .inputArea + .btnRemove {display: block; opacity: 1; transition: opacity .3s .1s;}
+
+.asideArea.product .nice-select {
+    width: 248px;
+    margin-bottom: 40px;
+
+    @include res__SmHeight {
+        margin-bottom: 30px;
+        font-size: 12px;
+        letter-spacing: 1px;
+
+        .option {
+            font-size: 12px;
+            letter-spacing: 0.05rem;
+        }
+    }
+
+    &:last-child {
+        .list {
+            position: absolute;
+            top: -248px;
+        }
+    } 
+
+}
+.asideArea.product .imgAttach {
+    clear: both;
+    position: relative;
+    width: 208px;
+    margin-bottom: 40px;
+    padding-right: 40px;
+
+    @include res__SmHeight {
+        margin-bottom: 30px;
+    }
+}
 .asideArea.product .imgAttach div {overflow:hidden;position:absolute;right:0;top:0;width:36px;height:36px;font-size:12px;}
 .asideArea.product .imgAttach div input {opacity:0;position:absolute;left:-999px;font-size:0;line-height:0;}
 .asideArea.product .imgAttach div label {overflow:hidden;display:block;width:36px;height:36px;text-indent:-999px;background:#ccc;background:#464646 url('../images/content/btn_upload.png');background-size:36px 36px; cursor: pointer;}
@@ -351,6 +448,10 @@ font-weight: bold;letter-spacing: 2px;color: #3c3c3c;}
 .asideArea.product .imgAttach span {display:block;margin-bottom:7px;font-size:11px; font-weight:bold;letter-spacing:2.4px;}
 .asideArea.product .imgAttach a {font-size: 12px;font-weight: bold;letter-spacing: 2.2px;color: #626262;}
 .asideArea.product .imgAttach em {font-size:10px;padding:0px 10px;color: #626262; font-weight:bold;}
+
+.asideArea.product .writeBox {
+    position: relative;
+}
 
 /* videos *******************************************************************************/
 .videoThum {width:532px;height:300px;margin-top:18px;background: url('../images/content/bg_video.png');background-size:532px 300px; }

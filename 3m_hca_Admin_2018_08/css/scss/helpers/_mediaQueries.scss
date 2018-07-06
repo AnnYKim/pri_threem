@@ -6,6 +6,8 @@ $tablet-width: 768px;
 $mobile-width: 580px;
 $mobile-sm-width: 340px;
 
+$small-height: 640px;
+
 // ----------------------- * -----------------------
 
 // Laptop (SM)
@@ -36,6 +38,15 @@ $mobile-sm-width: 340px;
 // Mobile sm
 @mixin res__Mobile_S {
   @media screen and (max-width: #{$mobile-sm-width}) {
+    @content;
+  }
+}
+
+// ----------------------- * -----------------------
+
+// Small Height
+@mixin res__SmHeight {
+  @media screen and (max-height: #{$small-height}) {
     @content;
   }
 }

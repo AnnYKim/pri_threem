@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+// ****************
+// login
+// ****************
+
+.login {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  min-width: 560px;
+  min-height: 800px;
+  text-align: center;
+}
+.loginBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 440px;
+  margin: -400px 0px 0px -220px;
+  box-sizing: border-box;
+}
+.loginBox strong {
+  overflow: hidden;
+  display: block;
+  width: 181px;
+  height: 181px;
+  margin: 0 auto;
+  background: url("../images/common/hca_logo_login.png");
+  background-size: 100%;
+  text-indent: -999px;
+}
+.loginBox span {
+  display: block;
+  margin: 20px 0px 80px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #282828;
+}
+.loginBox span em {
+  display: block;
+  margin-top: 3px;
+  font-weight: normal;
+}
+
+.loginBox input {
+  width: 440px;
+  height: 20px;
+  padding-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+}
+.loginBox input::-webkit-input-placeholder {
+  color: #979797;
+}
+.loginBox input:-ms-input-placeholder {
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  color: #979797;
+}
+.loginBox input[type="text"] {
+  margin-bottom: 60px;
+}
+.loginBox input[type="password"] {
+  font-size: 20px;
+}
+.loginBox input[type="password"]::-webkit-input-placeholder {
+  font-size: 14px;
+}
+.loginBox input[type="password"]:-ms-input-placeholder {
+  font-size: 14px;
+}
+.loginBox input[type="password"]:-moz-placeholder {
+  font-size: 14px;
+}
+.loginBox input[type="password"]::-moz-placeholder {
+  font-size: 14px;
+}
+
+.loginBox a.btnLogin {
+  display: block;
+  width: 440px;
+  height: 68px;
+  background: #efefef;
+  line-height: 68px;
+  margin: 78px 0px 30px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #979797;
+  letter-spacing: 2.5px;
+  border: none;
+  outline: none;
+}
+.loginBox a.btnLogin.active {
+  background-image: linear-gradient(to bottom, #ff941e, #ff0a00);
+  color: #fff;
+  transition: background-image 0.4s;
+}
+.loginBox a.btnLogin.active:active {
+  background-image: linear-gradient(to bottom, #d16d00, #d90800);
+}
+.loginBox p a {
+  font-size: 14px;
+  color: #979797;
+  font-weight: bold;
+}
+.loginBox p a:active {
+  color: #282828;
+}
+.loginBox .copyright {
+  margin-top: 70px;
+  font-size: 11px;
+  color: #282828;
+  font-weight: 200;
+}
+
+.loginPop {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 600px;
+  height: 537px;
+  margin: 0px 0px 0px -280px;
+  background: #fff;
+  box-shadow: 0 23px 32px 1px rgba(66, 66, 66, 0.5);
+  border: solid 1px #f2f2f2;
+}
+.loginPopCont {
+  width: 400px;
+  margin: 90px auto 0 auto;
+  color: #282828;
+}
+.loginPopCont p {
+  font-size: 19px;
+  text-align: left;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+}
+.loginPopCont p span {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+.loginPopCont .bg {
+  display: block;
+  margin: 32px 0px 14px 0px;
+  padding: 33px 0px;
+  background: #fff8f7;
+}
+.loginPopCont .bg span {
+  display: block;
+  height: 1px;
+  background: #979797;
+}
+.loginPopCont strong {
+  display: block;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3.8px;
+}
+.loginPop .btnClose {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  text-indent: -999px;
+  background: #000 url("../images/content/btn_loginPopClose.png");
+  background-size: 40px 40px;
+}
